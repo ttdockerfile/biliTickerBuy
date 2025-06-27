@@ -10,10 +10,11 @@ RUN apt-get update && \
     ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone && \
     fc-cache -fv && \
-git clone --depth 1 https://github.com/mikumifa/biliTickerBuy.git && \
-cd biliTickerBuy && \
-pip install -r requirements.txt --break-system-packages && \
-apt-get clean && \
+    git clone --depth 1 https://github.com/mikumifa/biliTickerBuy.git && \
+    cd biliTickerBuy && \
+    pip install uv --break-system-packages && \
+    uv pip install -r requirements.txt --system && \
+    apt-get clean && \
     rm -rf \
     /tmp/* \
     /usr/share/doc/* \
