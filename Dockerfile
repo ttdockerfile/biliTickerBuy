@@ -20,7 +20,9 @@ apt-get clean && \
     /var/cache/* \
     /var/lib/apt/lists/* \
     /var/tmp/* \
-    /var/log/* && \
+    /var/log/*
+
+ENV TZ=Asia/Shanghai
 
 WORKDIR /app/biliTickerBuy
 
