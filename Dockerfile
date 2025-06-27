@@ -22,8 +22,6 @@ apt-get clean && \
     /var/tmp/* \
     /var/log/* && \
 
-ENV TZ=Asia/Shanghai
-
 WORKDIR /app/biliTickerBuy
 
 ENTRYPOINT ["python3", "/app/biliTickerBuy/main.py"]
